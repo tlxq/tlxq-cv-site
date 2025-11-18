@@ -1,31 +1,58 @@
-import { motion } from 'framer-motion';
-import Button from './Button';
+import { motion } from "framer-motion";
+import Button from "./Button";
+import VideoBackground from "./VideoBackground";
+import smoke from "../video/smoke.mp4";
 
+/**
+ * FrontPage - uses an imported video from src/video/smoke.mp4
+ *
+ * Vite will emit a URL for the imported file (works in dev & production).
+ */
 export default function FrontPage({ onEnter }) {
+  const videoSources = [
+    { src: smoke, type: "video/mp4" },
+  ];
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-black text-center text-white">
-      {/* Namn */}
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="bungee-spice-regular text-7xl md:text-8xl font-extrabold tracking-wide mb-6"
-      >
-        Tom Larsson
-      </motion.h1>
+    <div className="relative min-h-screen w-full flex items-center justify-center text-white overflow-hidden bg-black">
+      {/* Background video (absolute) */}
+      <VideoBackground sources={videoSources} poster="/images/hero-poster.jpg" />
 
-      {/* Titel */}
-      <motion.h2
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="mr-dafoe-regular text-5xl text-gray-400 mb-12"
-      >
-        Developer
-      </motion.h2>
+      {/* Foreground content (z-10 ensures it's above the video) */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-screen text-center px-6">
+        {/* Name */}
+        <motion.h1
+          initial={{ opacity: 0, y: -20, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="bungee-spice-regular text-6xl md:text-8xl font-extrabold tracking-wide mb-4 drop-shadow-lg"
+        >
+          Tom Larsson
+        </motion.h1>
 
-      {/* Styled-components knapp */}
-      <Button onEnter={onEnter} />
+        {/* Title */}
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 1 }}
+          className="mr-dafoe-regular text-3xl md:text-5xl text-gray-200 mb-10"
+        >
+          Developer
+        </motion.h2>
+
+        {/* Button */}
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}>
+          <Button onEnter={onEnter} />
+        </motion.div>
+
+        {/* Subtle CTA underline / micro animation */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.07 }}
+          transition={{ delay: 1.1, duration: 1 }}
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-40 h-0.5 bg-white rounded"
+        />
+      </div>
     </div>
   );
 }
