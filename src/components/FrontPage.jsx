@@ -3,18 +3,14 @@ import Button from "./Button";
 import VideoBackground from "./VideoBackground";
 import smoke from "../video/smoke.mp4";
 
-/**
- * FrontPage - uses an imported video from src/video/smoke.mp4
- *
- * Vite will emit a URL for the imported file (works in dev & production).
- */
+
 export default function FrontPage({ onEnter }) {
   const videoSources = [
     { src: smoke, type: "video/mp4" },
   ];
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center text-white overflow-hidden bg-black">
+    <div className="relative min-h-screen w-full flex items-center justify-center text-gray-500 overflow-hidden bg-black">
       {/* Background video (absolute) */}
       <VideoBackground sources={videoSources} poster="/images/hero-poster.jpg" />
 
@@ -25,7 +21,7 @@ export default function FrontPage({ onEnter }) {
           initial={{ opacity: 0, y: -20, scale: 0.98 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1 }}
-          className="bungee-spice-regular text-6xl md:text-8xl font-extrabold tracking-wide mb-4 drop-shadow-lg"
+          className="mea-culpa-regular text-10xl md:text-8xl font-extrabold tracking-wide mb-4 drop-shadow-lg cursor-none"
         >
           Tom Larsson
         </motion.h1>
@@ -37,7 +33,7 @@ export default function FrontPage({ onEnter }) {
           transition={{ delay: 0.4, duration: 1 }}
           className="mr-dafoe-regular text-3xl md:text-5xl text-gray-200 mb-10"
         >
-          Developer
+          
         </motion.h2>
 
         {/* Button */}

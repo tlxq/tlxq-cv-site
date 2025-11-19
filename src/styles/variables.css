@@ -4,7 +4,7 @@
   --surface: #121a2a;
   --text: #e9eef8;
   --muted: #a8b3c7;
-  --brand: #2ecc71; /* Hammarby-grön vibe */
+  --brand: #2ecc71;
   --brand-ink: #0e3d22;
   --border: #22304b;
 
@@ -12,6 +12,7 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
     Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji',
     'Segoe UI Emoji';
+  --font-mea-culpa: 'Mea Culpa', cursive;
 
   /* Fluid type scale */
   --step--1: clamp(0.85rem, 0.79rem + 0.25vw, 0.95rem);
@@ -52,6 +53,12 @@ html[data-theme='light'] {
 }
 .mr-dafoe-regular {
   font-family: 'Mr Dafoe', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mea-culpa-regular {
+  font-family: 'Mea Culpa', cursive;
   font-weight: 400;
   font-style: normal;
 }
