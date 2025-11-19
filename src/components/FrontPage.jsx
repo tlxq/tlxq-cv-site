@@ -41,13 +41,7 @@ export default function FrontPage({ onEnter }) {
           <Button onEnter={onEnter} />
         </motion.div>
 
-        {/* Subtle CTA underline / micro animation */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.07 }}
-          transition={{ delay: 1.1, duration: 1 }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 w-40 h-0.5 bg-white rounded"
-        />
+        
       </div>
     </div>
   );
