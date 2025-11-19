@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion';
 import Button from './Button';
 import VideoBackground from './VideoBackground';
-import smoke from '../video/smoke.mp4';
+import triang from '../video/triang.mp4';
 
 export default function FrontPage({ onEnter }) {
-  const videoSources = [{ src: smoke, type: 'video/mp4' }];
+  const videoSources = [{ src: triang, type: 'video/mp4' }];
 
   return (
     <div className="relative min-h-screen w-full flex items-center justify-center text-gray-500 overflow-hidden bg-black">
