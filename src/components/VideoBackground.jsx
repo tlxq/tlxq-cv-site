@@ -57,7 +57,7 @@ export default function VideoBackground({
         style={{
           animation: 'vb-zoom 35s ease-in-out infinite alternate',
           transformOrigin: 'center center',
-          filter: 'brightness(0.65) contrast(1.05) saturate(1.1)',
+          filter: 'brightness(0.85) contrast(1.05) saturate(1.1)',
           willChange: 'transform',
         }}
       >
