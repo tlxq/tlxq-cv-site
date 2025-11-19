@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
     background: none;
     cursor: pointer;
     display: inline-flex;
-    align-items: center;
+    align-items: baseline;
     color: white;
   }
 
