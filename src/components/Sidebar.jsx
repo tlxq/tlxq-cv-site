@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
-import { 
-  Code2, 
-  Terminal, 
-  Layers, 
-  BookOpen, 
-  Settings, 
-  Globe2, 
-  Heart, 
-  Zap, 
-  Cat 
+import {
+  Code2,
+  Terminal,
+  Layers,
+  BookOpen,
+  Settings,
+  Globe2,
+  Heart,
+  Zap,
+  Cat,
 } from 'lucide-react';
 
 const Sidebar = () => {
@@ -20,10 +20,19 @@ const Sidebar = () => {
       title: t('sections.stack'),
       icon: <Layers className="w-4 h-4" />,
       content: [
-        { label: t('sidebar.stack.frontend'), items: 'React, Next.js, TypeScript, Tailwind CSS' },
-        { label: t('sidebar.stack.backend'), items: 'Node.js, Supabase, PostgreSQL, REST APIs' },
-        { label: t('sidebar.stack.devops'), items: 'Docker, Git, Linux, Bash, CI/CD' }
-      ]
+        {
+          label: t('sidebar.stack.frontend'),
+          items: 'React, Next.js, TypeScript, Tailwind CSS',
+        },
+        {
+          label: t('sidebar.stack.backend'),
+          items: 'Node.js, Supabase, PostgreSQL, REST APIs',
+        },
+        {
+          label: t('sidebar.stack.devops'),
+          items: 'Docker, Git, Linux, Bash, CI/CD',
+        },
+      ],
     },
     {
       title: t('sections.courses'),
@@ -33,8 +42,8 @@ const Sidebar = () => {
         'Node.js (Backend)',
         'Databasteknik (Arkitektur)',
         'UX (Interaktionsdesign)',
-        'Agila metoder'
-      ]
+        'Agila metoder',
+      ],
     },
     {
       title: t('sections.tools'),
@@ -42,26 +51,32 @@ const Sidebar = () => {
       content: [
         { label: 'Plattformar:', items: 'Vercel, Supabase' },
         { label: 'Verktyg:', items: 'Postman, Figma, Git' },
-        { label: 'Metodik:', items: 'Scrum, Kanban, GitHub Projects' }
-      ]
+        { label: 'Metodik:', items: 'Scrum, Kanban, GitHub Projects' },
+      ],
     },
     {
       title: t('sections.languages'),
       icon: <Globe2 className="w-4 h-4" />,
-      content: [
-        t('sidebar.languages.swedish'),
-        t('sidebar.languages.english')
-      ]
+      content: [t('sidebar.languages.swedish'), t('sidebar.languages.english')],
     },
     {
       title: t('sections.outside'),
       icon: <Heart className="w-4 h-4" />,
       content: [
-        { icon: <Zap className="w-3 h-3 text-violet-500" />, text: t('sidebar.outside.football') },
-        { icon: <Zap className="w-3 h-3 text-violet-500" />, text: t('sidebar.outside.gym') },
-        { icon: <Cat className="w-3 h-3 text-violet-500" />, text: t('sidebar.outside.cats') }
-      ]
-    }
+        {
+          icon: <Zap className="w-3 h-3 text-violet-500" />,
+          text: t('sidebar.outside.football'),
+        },
+        {
+          icon: <Zap className="w-3 h-3 text-violet-500" />,
+          text: t('sidebar.outside.gym'),
+        },
+        {
+          icon: <Cat className="w-3 h-3 text-violet-500" />,
+          text: t('sidebar.outside.cats'),
+        },
+      ],
+    },
   ];
 
   return (
@@ -69,20 +84,22 @@ const Sidebar = () => {
       {/* Profile Image */}
       <div className="glass p-6 rounded-3xl flex flex-col items-center text-center overflow-hidden group">
         <div className="relative w-48 h-48 mb-6 rounded-full overflow-hidden border-2 border-white/5 p-1">
-          <img 
-            src="/profile.png" 
-            alt="Tom Larsson" 
+          <img
+            src="/profile.webp"
+            alt="Tom Larsson"
             className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700"
           />
         </div>
         <h2 className="text-xl font-bold mb-1">{t('name')}</h2>
-        <p className="text-violet-400 text-xs font-bold uppercase tracking-widest">{t('title')}</p>
+        <p className="text-violet-400 text-xs font-bold uppercase tracking-widest">
+          {t('title')}
+        </p>
       </div>
 
       {/* Sidebar Sections */}
       <div className="space-y-6">
         {sections.map((section, idx) => (
-          <motion.div 
+          <motion.div
             key={idx}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -110,7 +127,9 @@ const Sidebar = () => {
                     </div>
                   ) : (
                     <div className="space-y-0.5">
-                      <div className="font-bold text-white/90">{item.label}</div>
+                      <div className="font-bold text-white/90">
+                        {item.label}
+                      </div>
                       <div className="text-white/60">{item.items}</div>
                     </div>
                   )}
