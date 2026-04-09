@@ -1,19 +1,27 @@
 :root {
-  /* Colors */
-  --bg: #0b1220;
-  --surface: #121a2a;
-  --text: #e9eef8;
-  --muted: #a8b3c7;
-  --brand: #2ecc71;
-  --brand-ink: #0e3d22;
-  --border: #22304b;
+  /* Midnight Nebula Palette */
+  --nebula-950: #05050a;
+  --nebula-900: #0a0a1f;
+  --nebula-800: #16163d;
+  --violet: #8b5cf6;
+  --pink: #ec4899;
+  --cyan: #06b6d4;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --surface: rgba(15, 15, 35, 0.4);
+  --border: rgba(255, 255, 255, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Mapping to project variables */
+  --bg: var(--nebula-950);
+  --text: var(--text-primary);
+  --muted: var(--text-muted);
+  --brand: var(--violet);
 
   /* Typography */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
-    Cantarell, Noto Sans, Helvetica, Arial, 'Apple Color Emoji',
-    'Segoe UI Emoji';
-  --font-orbit: 'Orbitron', sans-serif;
-
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  
   /* Fluid type scale */
   --step--1: clamp(0.85rem, 0.79rem + 0.25vw, 0.95rem);
   --step-0: clamp(1rem, 0.92rem + 0.4vw, 1.1rem);
@@ -24,9 +32,9 @@
   --step-5: clamp(2.49rem, 2.06rem + 2.29vw, 2.8rem);
 
   /* Layout */
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  --container: 1100px;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --container: 1000px;
   --space-1: 8px;
   --space-2: 12px;
   --space-3: 16px;
@@ -36,29 +44,21 @@
   --space-7: 72px;
 }
 
-html[data-theme='light'] {
-  --bg: #ffffff;
-  --surface: #f7f9fc;
-  --text: #0a0e17;
-  --muted: #4b5565;
-  --brand: #2ecc71;
-  --brand-ink: #0e3d22;
-  --border: #e5e9f2;
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
 }
 
-.bungee-spice-regular {
-  font-family: 'Bungee Spice', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.mr-dafoe-regular {
-  font-family: 'Mr Dafoe', cursive;
-  font-weight: 400;
-  font-style: normal;
+.text-gradient {
+  background: linear-gradient(to right, var(--violet), var(--pink), var(--cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.font-orbit {
-  font-family: 'orbitron', sans-serif;
-  font-weight: 400;
-  font-style: normal;
+.nebula-bg {
+  background: radial-gradient(circle at center, #1e1b4b 0%, #05050a 100%);
+  background-attachment: fixed;
 }

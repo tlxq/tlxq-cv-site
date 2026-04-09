@@ -1,18 +1,32 @@
-import { useState } from 'react';
-import FrontPage from './components/FrontPage';
-import MainPage from './components/MainPage'; // din huvudsida
+import { useState, useEffect } from 'react';
+import { LanguageProvider } from './context/LanguageProvider';
+import LoadingScreen from './components/LoadingScreen';
+import CVLayout from './components/CVLayout';
+import './styles/globals.css';
 
 function App() {
-  const [entered, setEntered] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const hasVisited = sessionStorage.getItem('hasVisited');
+    if (hasVisited) {
+      setIsLoading(false);
+    }
+  }, []);
+
+  const handleLoadingComplete = () => {
+    sessionStorage.setItem('hasVisited', 'true');
+    setIsLoading(false);
+  };
 
   return (
-    <>
-      {entered ? (
-        <MainPage /> // Här laddas huvudsidan
+    <LanguageProvider>
+      {isLoading ? (
+        <LoadingScreen onComplete={handleLoadingComplete} />
       ) : (
-        <FrontPage onEnter={() => setEntered(true)} />
+        <CVLayout />
       )}
-    </>
+    </LanguageProvider>
   );
 }
 

@@ -1,12 +1,29 @@
-# React + Vite
+# ✦ Midnight Nebula CV Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, space-inspired, and interactive portfolio/CV site built with **React**, **Tailwind CSS 4**, and **Framer Motion**. This project is meticulously designed to reflect a professional CV while maintaining a polished, dark-mode aesthetic.
 
-Currently, two official plugins are available:
+## 🌌 Theme: Midnight Nebula
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project features a custom-crafted color palette and advanced visual effects:
 
-## Expanding the ESLint configuration
+- **Background:** Deep Nebula 950 (`#05050a`) with immersive radial gradients.
+- **Accents:** Violet (`#8b5cf6`), Pink (`#ec4899`), and Cyan (`#06b6d4`).
+- **Effects:** Glassmorphism (blurred surfaces), vibrant text gradients, and smooth state-driven animations.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Key Features
+
+- **Bilingual Support (i18n):** Seamlessly toggle between Swedish and English for a global reach.
+- **Modern Loader:** A custom, session-based loading screen that provides a premium first impression.
+- **Responsive Architecture:** Optimized for both desktop (structured two-column CV layout) and mobile (stacked high-impact view).
+- **Performance First:** Powered by Vite for lightning-fast load times and a superior user experience.
+
+## 🛠 Technical Stack
+
+- **Frontend:** React 19, Lucide React (icons).
+- **Styling:** Tailwind CSS 4, CSS Variables.
+- **Animations:** Framer Motion.
+- **Tooling:** Vite, ESLint, Prettier.
+
+---
+
+Built with 💜 by tlxq

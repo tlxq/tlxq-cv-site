@@ -1,0 +1,80 @@
+{
+  "name": "Tom Larsson",
+  "title": "JUNIOR FULLSTACK DEVELOPER",
+  "lia_period": "LIA: w.35–48",
+  "profile_summary": "Fullstack developer focused on TypeScript, React, and backend development. Beyond my education, I have practical experience setting up Linux environments and integrating real-time data into personal projects. Seeking an internship (LIA) position (w.35–48) in a team that values technical precision and modern development workflows.",
+  "sections": {
+    "profile": "Profile",
+    "projects": "Technical Projects",
+    "education": "Education",
+    "experience": "Work Experience",
+    "stack": "Technical Stack",
+    "courses": "Relevant Courses",
+    "tools": "Tools & Environments",
+    "languages": "Languages",
+    "outside": "Beyond the Code"
+  },
+  "projects": {
+    "tt_pulse": {
+      "title": "TT-Pulse",
+      "repo_url": "https://github.com/tlxq/tt-pulse",
+      "subtitle": "2025 - Ongoing (Personal project)",
+      "description": "A system built to collect and visualize system data and Git activity in real-time.",
+      "points": [
+        "Backend: Developed agents in Node.js running on Linux servers to collect statistics and system health.",
+        "Integration: Set up data flows to Supabase (PostgreSQL) and used real-time listeners for immediate updates.",
+        "Frontend: Built a dashboard in Next.js showing collected data in real-time with clear graphs and logs.",
+        "Functionality: Implemented logic to mask sensitive data and created simple triggers for system alerts."
+      ]
+    },
+    "ttdevs": {
+      "title": "ttdevs.com",
+      "repo_url": "https://github.com/tlxq/ttdevs.com",
+      "subtitle": "2025 - Ongoing (Personal project)",
+      "description": "Personal platform built to learn modern web development and performance optimization.",
+      "points": [
+        "Used Next.js and TypeScript to build a stable and type-safe application.",
+        "Optimized the site for fast loading and good discoverability through techniques like SSR and ISR."
+      ]
+    }
+  },
+  "education": {
+    "school": "Yrkeshögskolan i Borås",
+    "degree": "Frontend Developer React",
+    "date": "2025 - 2026",
+    "description": "Focus on modern web development, component-based architecture, and backend integrations."
+  },
+  "experience": {
+    "operator": {
+      "title": "Operator (Technical Problem Solving)",
+      "company": "Idemia, Strängnäs",
+      "date": "2022 - 2024",
+      "description": "Worked with practical troubleshooting and optimization of processes in an environment with high requirements for accuracy. Experience following complex instructions and solving technical hurdles under time pressure."
+    },
+    "sales": {
+      "title": "Sales (Operations & Support)",
+      "company": "OKQ8, Mälardalen",
+      "date": "2021 - 2024",
+      "description": "Handled daily operations and provided technical support for simple system errors. Trained in quickly prioritizing tasks and solving problems directly on-site."
+    }
+  },
+  "sidebar": {
+    "stack": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps"
+    },
+    "languages": {
+      "swedish": "Swedish: Native",
+      "english": "English: Professional level"
+    },
+    "outside": {
+      "football": "Hammarby Football: Passionate supporter who appreciates the community around the sport.",
+      "gym": "Gym & Training: To maintain focus and energy in everyday life.",
+      "cats": "Cats: Proud owner of a Bengal and a Devon Rex who often keep me company."
+    }
+  },
+  "contact": {
+    "location": "Strängnäs, Sweden"
+  }
+}
